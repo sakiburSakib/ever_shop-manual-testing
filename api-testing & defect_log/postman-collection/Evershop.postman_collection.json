@@ -1,0 +1,220 @@
+{
+  "info": {
+    "_postman_id": "e1a2c9ba-d1b0-48b3-9c46-a7b3b14c372f",
+    "name": "Evershop",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44883923"
+  },
+  "item": [
+    {
+      "name": "Search API",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demo.evershop.io/accessories?keyword=stainless-steel-thermos-black",
+          "protocol": "https",
+          "host": [
+            "demo",
+            "evershop",
+            "io"
+          ],
+          "path": [
+            "accessories"
+          ],
+          "query": [
+            {
+              "key": "keyword",
+              "value": "stainless-steel-thermos-black"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "add-to-cart",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"qty\":\"{{product_qty}}\",\r\n    \"sku\": \"{{selected_product_sku}}\"  \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demo.evershop.io/api/cart/mine/items",
+          "protocol": "https",
+          "host": [
+            "demo",
+            "evershop",
+            "io"
+          ],
+          "path": [
+            "api",
+            "cart",
+            "mine",
+            "items"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "View Cart",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demo.evershop.io/cart",
+          "protocol": "https",
+          "host": [
+            "demo",
+            "evershop",
+            "io"
+          ],
+          "path": [
+            "cart"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Fetch All Products",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demo.evershop.io/accessories",
+          "protocol": "https",
+          "host": [
+            "demo",
+            "evershop",
+            "io"
+          ],
+          "path": [
+            "accessories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"increase\",\r\n  \"qty\": 5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demo.evershop.io/api/cart/mine/items/f00ded4e-aab0-46db-bad1-32fe3fdc1e36",
+          "protocol": "https",
+          "host": [
+            "demo",
+            "evershop",
+            "io"
+          ],
+          "path": [
+            "api",
+            "cart",
+            "mine",
+            "items",
+            "f00ded4e-aab0-46db-bad1-32fe3fdc1e36"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "product",
+      "value": ""
+    },
+    {
+      "key": "product_qty",
+      "value": ""
+    },
+    {
+      "key": "selected_product_sku",
+      "value": ""
+    },
+    {
+      "key": "selected_product_sku",
+      "value": "",
+      "disabled": true
+    }
+  ]
+}
